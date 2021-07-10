@@ -1,0 +1,5 @@
+{
+  "vetur.validation.style": false,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+}
