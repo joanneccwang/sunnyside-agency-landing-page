@@ -62,9 +62,6 @@ export default {
 }
 img {
   width: 100%;
-  opacity: 0.5;
-  /* height: 300px;
-  width: 100%; */
 }
 
 .info {
