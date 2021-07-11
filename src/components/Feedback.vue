@@ -1,12 +1,14 @@
 <template>
   <section id="feedback">
     <h4 class="title">CLIENT TESTIMONIALS</h4>
-    <div v-for="feedback in feedbacks" :key="feedback.client"
-      class="client">
-      <img :src="feedback.photo" alt="">
-      <p>{{ feedback.text }}</p>
-      <h4>{{ feedback.client }}</h4>
-      <span>{{ feedback.position }}</span>
+    <div class="client-wrapper">
+      <div v-for="feedback in feedbacks" :key="feedback.client"
+        class="client">
+        <img :src="feedback.photo" alt="">
+        <p>{{ feedback.text }}</p>
+        <h4>{{ feedback.client }}</h4>
+        <span>{{ feedback.position }}</span>
+      </div>
     </div>
   </section>
 </template>
@@ -52,6 +54,10 @@ export default {
   letter-spacing: 2px;
   color: var(--grayish-blue);
 }
+#feedback .client-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 #feedback .client {
   display: flex;
   flex-direction: column;
@@ -81,5 +87,36 @@ export default {
   margin-top: 10px;
   font-size: 14px;
   color: var(--grayish-blue);
+}
+
+@media (min-width: 768px) {
+  #feedback {
+    margin: 100px 0px;
+  }
+  #feedback .title {
+    letter-spacing: 2px;
+    color: var(--grayish-blue);
+    font-size: 25px;
+    margin: 15px;
+  }
+  #feedback .client-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+  }
+  #feedback .client {
+    max-width: 360px;
+    margin-bottom: 25px;
+  }
+  #feedback .client img {
+    margin: 60px;
+  }
+  #feedback .client p {
+    margin: 0px;
+    margin-bottom: 50px;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
   <section id="photography">
     <div v-for="photo in photos" :key="photo.title"
       class="photo"
-      :style="{backgroundImage: `url(${photo.background})`, opacity: 0.5}">
+      :style="{backgroundImage: `url(${photo.background})`}">
       <h1 :style="{ color: `var(--${photo.color})`}">{{ photo.title }}</h1>
       <p :style="{ color: `var(--${photo.color})`}">{{ photo.paragraph }}</p>
     </div>
