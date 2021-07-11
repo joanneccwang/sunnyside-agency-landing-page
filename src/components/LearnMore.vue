@@ -68,10 +68,12 @@ img {
   flex: 0 0 auto;
   margin: 25px 0px;
   line-height: 1.2em;
+  color: var(--very-dark-desaturated-blue);
 }
 .learn-more p {
   flex: 1;
   line-height: 1.6em;
+  color: var(--very-dark-grayish-blue);
 }
 .learn-more button {
   flex: 0 0 auto;
@@ -80,5 +82,6 @@ img {
   font-size: 18px;
   border-bottom: 6px solid var(--yellow);
   cursor: pointer;
+  color: var(--very-dark-desaturated-blue);
 }
 </style>

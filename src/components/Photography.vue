@@ -1,10 +1,10 @@
 <template>
   <section v-for="photo in photos" :key="photo.title"
     class="photography"
-    :style="{background: `url(${photo.background}) center/cover`, height: '600px', opacity: 0.5}"
+    :style="{background: `url(${photo.background}) center/cover`, height: '600px'}"
   >  
-    <h1>{{ photo.title }}</h1>
-    <p>{{ photo.paragraph }}</p>
+    <h1 :style="{ color: `var(--${photo.color})`}">{{ photo.title }}</h1>
+    <p :style="{ color: `var(--${photo.color})`}">{{ photo.paragraph }}</p>
   </section>
 </template>
 <script>
@@ -16,10 +16,12 @@ export default {
       title: 'Graphic Design',
       paragraph: 'Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.',
       background: GraphicBG,
+      color: 'dark-desaturated-cyan',
     }, {
       title: ' Photography',
       paragraph: 'Increase your credibility by getting the most stunning, high-quality photos that improve your business image.',
       background: PhotographyBG,
+      color: 'dark-blue',
     }];
 
     return {

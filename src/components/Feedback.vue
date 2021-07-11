@@ -50,14 +50,14 @@ export default {
 #feedback .title {
   margin: 25px;
   letter-spacing: 2px;
+  color: var(--grayish-blue);
 }
 #feedback .client {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#feedback .client:not(:last-child) {
   margin-bottom: 40px;
+  color: var(--very-dark-desaturated-blue);
 }
 #feedback .client img {
   margin: 30px;
@@ -70,6 +70,7 @@ export default {
   text-align: center;
   margin: 10px;
   line-height: 1.6em;
+  color: var(--very-dark-grayish-blue);
 }
 
 #feedback .client h4 {
@@ -79,5 +80,6 @@ export default {
 #feedback .client span {
   margin-top: 10px;
   font-size: 14px;
+  color: var(--grayish-blue);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="background"></div>
+  <!-- <div class="background"></div> -->
   <Header></Header>
   <ShowCase></ShowCase>
   <LearnMore v-for="section in learnMoreSections" :key="section.key"
@@ -11,6 +11,8 @@
   ></LearnMore>
   <Photography></Photography>
   <Feedback></Feedback>
+  <Gallery></Gallery>
+  <Footer></Footer>
 </template>
 
 <script setup>
@@ -19,6 +21,8 @@ import ShowCase from './components/ShowCase.vue';
 import LearnMore from './components/LearnMore.vue';
 import Photography from './components/Photography.vue';
 import Feedback from './components/Feedback.vue';
+import Gallery from './components/Gallery.vue';
+import Footer from './components/Footer.vue';
 
 import MobileTransformBG from './assets/mobile/image-transform.jpg';
 import MobileStandoutBG from './assets/mobile/image-stand-out.jpg';
