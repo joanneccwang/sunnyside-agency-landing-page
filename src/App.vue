@@ -8,6 +8,7 @@
     :paragraphs="section.paragraphs"
     :color="section.color"
     :image="section.image"
+    :direction="section.direction"
   ></LearnMore>
   <Photography></Photography>
   <Feedback></Feedback>
@@ -28,21 +29,8 @@ import Footer from './components/Footer.vue';
 
 import MobileTransformBG from './assets/mobile/image-transform.jpg';
 import MobileStandoutBG from './assets/mobile/image-stand-out.jpg';
-const learnMoreSections = [{
-    key: 'transform',
-    title: 'Transform your brand',
-    paragraphs: [
-      'We are a full-service creative agency specializing in helping brands grow  fast.', 
-      'Engage your clients through compelling visuals that do most of the   marketing for you.'],
-    color: 'hsl(51, 100%, 49%)', // --yellow
-    image: MobileTransformBG,
-  }, {
-    key: 'standout',
-    title: 'Stand out to the right audience',
-    paragraphs: ['Using a collaborative formula of designers, researchers,  photographers, videographers, and copywriters, we’ll build and extend your   brand in digital places.'],
-    color: 'hsl(7, 99%, 70%)', // --soft-red:
-    image: MobileStandoutBG,
-  }];
+import DesktopTransformBG from './assets/desktop/image-transform.jpg';
+import DesktopStandoutBG from './assets/desktop/image-stand-out.jpg';
 
 
 /** Detect media query */
@@ -54,6 +42,23 @@ const handleMediaQueryChanged = (e) => {
   // Check if the media query is true
   isDesktop.value = e.matches;
 };
+
+const learnMoreSections = [{
+    key: 'transform',
+    title: 'Transform your brand',
+    paragraphs: [
+      'We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the   marketing for you.'],
+    color: 'hsl(51, 100%, 49%)', // --yellow
+    image: isDesktop ? DesktopTransformBG : MobileTransformBG,
+    direction: 'left',
+  }, {
+    key: 'standout',
+    title: 'Stand out to the right audience',
+    paragraphs: ['Using a collaborative formula of designers, researchers,  photographers, videographers, and copywriters, we’ll build and extend your   brand in digital places.'],
+    color: 'hsl(7, 99%, 70%)', // --soft-red:
+    image: isDesktop ? DesktopStandoutBG : MobileStandoutBG,
+    direction: 'right',
+  }];
 
 onMounted(() => {
   // Register event listener
@@ -69,8 +74,8 @@ onMounted(() => {
 
 .background {
   
-  /* background: url('./assets/desktop-design.jpg') no-repeat;  */
-  background: url('./assets/mobile-menu.jpg') no-repeat; 
+  background: url('./assets/desktop-design.jpg') no-repeat; 
+  /* background: url('./assets/mobile-menu.jpg') no-repeat;  */
   height: 6000px;
   width: 100%;
   position: absolute;
