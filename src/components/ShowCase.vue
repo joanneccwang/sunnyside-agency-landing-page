@@ -19,7 +19,7 @@ export default {
 
   height: 540px;
   background: url('../assets/mobile/image-header.jpg') no-repeat center/cover;
-  /* opacity: 0.5; */
+  opacity: 0.5;
 }
 
 #showcase > .title {

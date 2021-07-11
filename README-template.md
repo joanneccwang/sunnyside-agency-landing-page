@@ -11,8 +11,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -57,25 +55,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-- Getting familiar with Vue3 Composition API
 - Getting familiar with Vite
+- Getting familiar with Vue3 Composition API
+- Passing data in Vue component using `provide` and `inject`
+- Change svg color to white using `filter` property: [Reference from Stackoverflow](https://stackoverflow.com/questions/24224112/css-filter-make-color-image-with-transparency-white)
+```css
+  img:hover {
+    filter: brightness(0) invert(1); 
+  }
+```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Work with JS media queries using window.matchMediaQuery() method : [Reference from CSS Tricks](https://css-tricks.com/working-with-javascript-media-queries/)
+```javascript
+// Create a media condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+const handleMediaQueryChanged = (e) => {
+  // Check if the media query is true
+  if (e.matches) {
+    // Then log the following message to the console
+    console.log('Media Query Changed!')
+  }
+}
+// Register event listener
+mediaQuery.addListener(handleMediaQueryChanged)
+// Initial check
+handleTabletChange(mediaQuery)
+```
 
 ## Author
 
