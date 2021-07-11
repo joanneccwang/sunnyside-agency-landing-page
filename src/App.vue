@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="background"></div> -->
+  <div class="background"></div>
   <Header></Header>
   <ShowCase></ShowCase>
   <LearnMore v-for="section in learnMoreSections" :key="section.key"
@@ -9,12 +9,16 @@
     :color="section.color"
     :image="section.image"
   ></LearnMore>
+  <Photography></Photography>
+  <Feedback></Feedback>
 </template>
 
 <script setup>
 import Header from './components/Header.vue';
 import ShowCase from './components/ShowCase.vue';
 import LearnMore from './components/LearnMore.vue';
+import Photography from './components/Photography.vue';
+import Feedback from './components/Feedback.vue';
 
 import MobileTransformBG from './assets/mobile/image-transform.jpg';
 import MobileStandoutBG from './assets/mobile/image-stand-out.jpg';
@@ -42,7 +46,7 @@ const learnMoreSections = [{
 .background {
   
   background: url('./assets/mobile-design.jpg') no-repeat; 
-  height: 4000px;
+  height: 6000px;
   width: 100%;
   position: absolute;
   top: 0;
