@@ -35,7 +35,23 @@ export default {
 
 #showcase > img {
   margin: 25px 0px 30px 0px;
-  /* margin: 30px; */
+}
+
+@media(min-width: 768px) {
+  #showcase {
+    height: 800px;
+    background: url('../assets/desktop/image-header.jpg') no-repeat center/cover;
+    justify-content: flex-start;
+  }
+  #showcase > .title {
+    font-size: 60px;
+    letter-spacing: 6px;
+    line-height: 80px;
+    margin: 185px 0px 0px;
+  }
+  #showcase > img {
+    margin: 95px 0px;
+  }
 }
 </style>
 

@@ -73,6 +73,7 @@ header {
 .nav li {
   padding: 15px 25px;
   font-size: 20px;
+  cursor: pointer;
 }
 .nav li.contact {
   margin: 20px 0px 10px 0px;
@@ -102,6 +103,7 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     color: var(--white);
+    padding: 0px;
   }
   .nav::before {
     display: none;
@@ -112,6 +114,7 @@ header {
   }
   .nav li.contact {
     margin: 0px 15px;
+    padding: 15px 30px;
     color: black;
     border-radius: 35px;
     background-color: var(--white); 
