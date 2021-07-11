@@ -83,8 +83,8 @@ header {
   font-size: 16px;
 }
 .nav li.contact:hover {
-  color: var(--white);
-  background-color: rgba(255,255,255, 0.2); 
+  color: black;
+  background-color: var(--yellow); 
 }
 
 
