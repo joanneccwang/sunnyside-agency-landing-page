@@ -1,5 +1,4 @@
 <template>
-  <div class="background"></div>
   <Header></Header>
   <ShowCase></ShowCase>
   <LearnMore v-for="section in learnMoreSections" :key="section.key"
@@ -71,17 +70,4 @@ onMounted(() => {
 <style>
 @import './style/reset.css';
 @import './style/variables.css';
-
-.background {
-  
-  background: url('./assets/desktop-design.jpg') no-repeat; 
-  /* background: url('./assets/mobile-menu.jpg') no-repeat;  */
-  height: 6000px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  z-index: -1;
-}
 </style>

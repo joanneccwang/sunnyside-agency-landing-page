@@ -10,6 +10,11 @@
       <img v-for="social in socials" :key="social.key"
       :src="social.icon" alt="">
     </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"  target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/joanneccwang" target="_blank">Joanne Wang</a>.
+    </div>
   </section>
 </template>
 <script>
@@ -50,6 +55,7 @@ export default {
 </script>
 <style scoped>
 #footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -96,5 +102,28 @@ export default {
 
 #footer .icon-wrapper img:hover {
   filter: brightness(0) invert(1);
+}
+
+#footer .attribution {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#footer .attribution a {
+  color: var(--dark-moderate-cyan);
+}
+
+@media (min-width: 768px) {
+  #footer {
+    padding: 50px 0px;
+  }
+  #footer .logo {
+    margin: 10px 0px;
+  }
+  #footer .btn-wrapper {
+    margin: 35px auto;
+    padding: 0px 20px;
+    gap: 60px;
+  }
 }
 </style>

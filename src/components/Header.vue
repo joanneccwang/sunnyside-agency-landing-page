@@ -53,7 +53,6 @@ header {
   top: 75px;
   width: 100%;
   background: var(--white);
-  opacity: 0.5;
   display: flex;
   flex-direction: column;
   align-items: center;
